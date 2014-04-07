@@ -1,0 +1,8 @@
+@font-face {
+    font-family: 'SimplonBPRegular';
+    src: url('simplonbpregular.eot');
+    src: url('simplonbpregular.eot') format('embedded-opentype'),
+         url('simplonbpregular.woff') format('woff'),
+         url('simplonbpregular.ttf') format('truetype'),
+         url('simplonbpregular.svg#SimplonBPRegular') format('svg');
+}

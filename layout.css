@@ -1,0 +1,653 @@
+/*
+* Fishbird
+* Created by Smith
+* using the Skeleton V1.2 framework
+* Copyright 2011, Dave Gamache
+* www.getskeleton.com
+*/
+
+
+/* #Global Styles
+================================================== */
+
+* {
+	box-sizing: border-box;
+}
+
+body {    
+	font-family: 'SimplonBPRegular';
+	border-top: 6px solid black;
+	transition: border-top .3s;
+	width: 100%;
+	margin: 0 auto;
+}
+
+.home {
+	background: url(images/logo.svg) no-repeat;
+	background-size: 50%;
+	background-attachment: fixed;
+	background-position: 48.2% 45%;
+}
+
+h1 {
+	font-size: 30px;
+	line-height: 30px;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	display: inline-block;
+	padding-right: 1rem;
+}
+
+a {
+	text-decoration: none;
+	border-bottom: 2px solid;
+	transition: color .3s;
+}
+
+.home .content {
+	position: fixed;
+	top: 71%;
+	left: 50%;
+	-webkit-transform: translateX(-50%);
+	-moz-transform: translateX(-50%);
+	-o-transform: translateX(-50%);
+	-ms-transform: translateX(-50%);
+	transform: translateX(-50%);
+	z-index: 999;
+}
+
+.home.overflow {
+	overflow: hidden;
+}
+
+.light-blue:hover {
+	color: #00bff3;
+	cursor: pointer;
+	transition: color .3s;
+}
+
+.light-blue-border {
+	border-top: 6px solid #00bff3;
+	transition: border-top .3s;
+}
+
+.red:hover {
+	color: #ed3a1c;
+	cursor: pointer;
+	transition: color .3s;
+}
+
+.yellow:hover {
+	color: #fff568;
+	cursor: pointer;
+	transition: color .3s;	
+}
+
+.yellow-border {
+	border-top: 6px solid #fff568;
+	transition: border-top .3s;
+}
+
+.red-border {
+	border-top: 6px solid #ed3a1c;
+	transition: border-top .3s;
+}
+
+.purple:hover {
+	color: #963496;
+	cursor: pointer;
+	transition: color .3s;	
+}
+
+.purple-border {
+	border-top: 6px solid #963496;
+	transition: border-top .3s;
+}
+
+
+.red-page {
+	height: 0rem;
+	width: 100%;
+	background: red;
+	color: white;
+	position: fixed;
+	top: 0;
+	left:0;
+	overflow: hidden;
+	transition: height .3s;
+}
+
+.expand {
+	height: 39rem;
+	padding: 3rem;
+	transition: height .3s;
+
+}
+
+.close {
+	text-align: center;
+}
+
+p.light-blue {
+	opacity: 1.0;
+	transition: all .3s;
+}
+
+header {
+	text-transform: uppercase;
+}
+
+header p:first-of-type {
+	float: left;
+}
+
+header p:last-of-type {
+	float: right;
+}
+
+.top {
+	width: 80%;
+	margin: 0 auto;
+	padding-top: 2%;
+	height: 4.2rem;
+}
+
+.top a {
+	border: 0;
+	text-transform: uppercase;
+}
+
+.top a:hover {
+	border-bottom: 1px solid;
+}
+
+footer {
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	margin: 0 auto;
+	clear: both;
+	padding-left: 10%;
+	padding-right: 10%;
+	padding-bottom: 2%;
+	text-transform: uppercase;
+}
+
+footer div:first-of-type {
+	float: left;
+}
+
+footer div:last-of-type {
+	float: right;
+}
+
+footer a, footer a:visited {
+	border: 0;
+}
+
+footer a:hover, footer a:active {
+	border-bottom: 1px solid;
+}
+
+.home article {
+	font-size: 18px;
+	line-height: 36px;
+	text-transform: uppercase;
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	margin: auto;
+	width: 80%;
+	top: 22%;
+}
+
+.opacity {
+	opacity: 0;
+	transition: all .3s;
+	position: absolute;
+	z-index: -999;
+}
+
+.what-close, .clients-close {
+	width: 8rem;
+	margin-top: 10%;
+	display: block;
+	float: right;
+	clear: both;
+}
+
+.what-close {
+	padding-bottom: 10%;
+}
+
+.clients-close {
+	margin-top: 5%;
+}
+
+.what-close:hover, .clients-close:hover {
+	cursor: pointer;
+}
+
+.clients span {
+	display: block;
+	line-height: 34px;
+}
+
+.published {
+	font-style: italic;
+	font-size: 11px;
+	margin-top: -0.55rem;
+	margin-bottom: 1rem;
+}
+
+.published a, .copy a {
+	border-bottom: 1px solid #000;
+}
+
+.published a:hover, .copy a:hover {
+	border-bottom: 1px solid #7ad2dd;
+}
+
+h3 {
+	font-size: 24px;
+	line-height: 36px;
+}
+
+h4 {
+	font-size: 18px;
+	line-height: 24px;
+}
+
+.home article.what-is-this section {
+	font-size: 12px;
+	line-height: 17px;
+	width: 44%;
+	float: left;
+	margin-top: 2rem;
+}
+
+.home article.what-is-this section + section {
+	margin-left: 5%;
+}
+
+.home article.clients section {
+	font-size: 14px;
+	line-height: 17px;
+	width: 25%;
+	float: left;
+	margin-top: 2rem;
+}
+
+span.less-height {
+	line-height: 17px;
+	margin-top: .5rem;
+	margin-bottom: .5rem;
+}
+
+
+/* #Page Styles
+================================================== */
+
+/* article 
+================== */
+
+.article {
+	border-top: 6px solid #fff568;
+}
+
+.article.disruptors {
+	border-top: 6px solid #963496;
+}
+
+.top {
+	text-align: center;
+	position: relative;
+	z-index: 10;
+}
+
+.top img {
+	width: 10rem;
+	margin-top: -0.5%;
+}
+
+.big-picture {
+	width: 100%;
+}
+
+.big-picture img {
+	max-width: 100%;
+	width: 100%;
+}
+
+.article .content {
+	position: relative;
+	top: -4.2rem;
+}
+
+h2 {
+	font-size: 24px;
+	line-height: 30px;
+	width: 100%;
+	border-bottom: 1px solid black;
+	padding-bottom: .1rem;
+	margin-bottom: .8rem;
+	text-transform: uppercase;
+}
+
+.article article {
+	width: 80%;
+	max-width: 960px;
+	margin: 1.2rem auto;
+}
+
+.copy {
+	width: 60%;
+	float: left;
+	font-size: 13px;
+	line-height: 18px;
+	clear: both;
+}
+
+.article aside {
+	float: right;
+	width: 35%;
+	font-size: 18px;
+	line-height: 40px;
+	margin-top: -0.4rem;
+	text-transform: uppercase;
+}
+
+.article aside span {
+	background: #7ad2dd;
+	padding: 5px;
+	color: #fff;
+}
+
+.article.disruptors aside span {
+	background: #3cb878;
+}
+
+::selection {
+	color: #fff;
+	background: #7ad2dd;
+}
+
+::moz-selection {
+	color: #fff;
+	background: #7ad2dd;
+}
+
+.article footer {
+	position: relative;
+	padding-bottom: 3%;
+}
+
+.article .top a:hover {
+	border-bottom: none;
+}
+
+.pagination {
+	float: left;
+	clear: both;
+	width: 60%;
+	margin-top: 2rem;
+}
+
+.pagination a, .pagination a:visited {
+	transition: .3s all;
+}
+
+.pagination a:hover, .pagination a:active {
+	color: #ef4036;
+	transition: .3s all;
+}
+
+.pagination a {
+	margin-left: .5rem;
+}
+
+.pagination .active {
+	margin-left: .5rem;
+}
+
+.next {
+	width: 90px;
+	float: right;
+	margin-top: -1.9rem;
+}
+
+.next a, .next a:hover, .next a:active, .next a:visited {
+	text-decoration: none;
+	border-bottom: 0;
+}
+
+aside.more-stories {
+	line-height: normal;
+}
+
+.more-stories .header-stories {
+	font-family: 'Impressum';
+	text-transform: lowercase;
+	border-top: 1px solid;
+	border-bottom: 1px solid;
+	padding-top: 0;
+	padding-bottom: 0;
+	margin-top: 2rem;
+	margin-bottom: .5rem;
+	font-size: 14px;
+	line-height: 40px;
+}
+
+.more-stories a, .more-stories a:visited {
+	font-size: 12px;
+	line-height: 24px;
+	border-bottom: 1px solid;
+}
+
+.more-stories a:hover, .more-stories a:active {
+	border-bottom: 1px solid #7ad2dd;
+}
+
+
+/* #Media Queries
+================================================== */
+
+	@media only screen and (max-width: 1280px) {
+
+	}
+
+	@media only screen and (max-width: 840px) {
+		body {
+			background-position: 48.2% 21%;
+		}
+
+		.content {
+			top: 49%;
+		}
+
+		.copy {
+			width: 100%;
+			float: left;
+			font-size: 13px;
+			line-height: 18px;
+		}
+
+		.article aside {
+			float: left;
+			width: 100%;
+			font-size: 18px;
+			line-height: 40px;
+			margin-bottom: 1rem;
+		}
+
+		.pagination {
+			width: 100%;
+		}
+
+
+	}
+
+
+	@media only screen and (max-width: 560px) {
+		body {
+			background-position: 48.2% 16%;
+		}
+
+		.content {
+			top: 38%;
+		}
+
+	}
+
+
+	/* Smaller than standard 960 (devices and browsers) */
+	@media only screen and (max-width: 959px) {}
+
+	/* Tablet Portrait size to standard 960 (devices and browsers) */
+	@media only screen and (min-width: 768px) and (max-width: 959px) {
+
+		.home article.clients section {
+			width: 33%;
+		}
+
+	}
+
+	/* All Mobile Sizes (devices and browser) */
+	@media only screen and (max-width: 767px) {
+		h1 {
+			font-size: 18px;
+			line-height: 18px;
+		}
+
+		.home article.clients section {
+			width: 100%;
+			clear: both;
+			margin-top: 0;
+		}
+
+		.home article.clients section:first-of-type {
+			margin-top: 2rem;
+		}
+
+		.home article.what-is-this section {
+			width: 100%;
+			clear: both;
+		}
+
+		.home article.what-is-this section + section {
+			margin-left: 0;
+		}
+
+
+
+
+
+	}
+
+	/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+	@media only screen and (min-width: 480px) and (max-width: 767px) {
+		
+	}
+
+	/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+	@media only screen and (max-width: 479px) {
+		h1 {
+			font-size: 12px;
+			line-height: 12px;
+		}
+
+		.top {
+			padding-top: 5%;
+		}
+
+
+		body {
+			background-position: 48.2% 30%;
+		}
+
+		.content {
+			top: 58%;
+		}
+
+		.home {
+			background: url(images/logo.svg) no-repeat;
+			background-size: 50%;
+			background-attachment: fixed;
+			background-position: 48.2% 15%;
+		}
+
+		.top img {
+			width: 7rem;
+			margin-top: -6.5%;
+		}
+
+		.mobile-opacity {
+			opacity: 0;
+			transition: all .3s;
+			position: absolute;
+			z-index: -999;
+		}
+
+
+
+
+	}
+
+	@media only screen and (min-width: 321px) and (max-width: 760px) and (orientation : landscape) {
+		h1 {
+			font-size: 16px;
+			line-height: 16px;
+		}
+
+		.top {
+			padding-top: 5%;
+		}
+
+
+		body {
+			background-position: 48.2% 50%;
+		}
+
+		.content {
+			top: 85%;
+		}
+
+		.home {
+			background: url(images/logo.svg) no-repeat;
+			background-size: 50%;
+			background-attachment: fixed;
+			background-position: 48.2% 10%;
+		}
+
+
+	}
+
+
+/* #Font-Face
+================================================== */
+
+
+@font-face {
+    font-family: 'SimplonBPRegular';
+    src: url('fonts/simplonbpregular.eot');
+    src: url('fonts/simplonbpregular.eot') format('embedded-opentype'),
+         url('fonts/simplonbpregular.woff') format('woff'),
+         url('fonts/simplonbpregular.ttf') format('truetype'),
+         url('fonts/simplonbpregular.svg#SimplonBPRegular') format('svg');
+}
+
+@font-face {
+  font-family: 'Impressum';
+  src: url('fonts/impressum-italic.eot'); /* IE9 Compat Modes */
+  src: url('fonts/impressum-italic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('fonts/impressum-italic.woff') format('woff'), /* Modern Browsers */
+       url('fonts/impressum-italic.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('fonts/impressum-italic.svg#625687d0dfbf0767cfcb80992f3b759a') format('svg'); /* Legacy iOS */
+       
+  font-style:   italic;
+  font-weight:  400;
+}
+
+
